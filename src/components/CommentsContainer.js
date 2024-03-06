@@ -19,43 +19,65 @@ const CommentsContainer = () => {
                     {
                       name: 'Akshay',
                       text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit qui corrupti sed nihil reiciendis illo exercitationem modi fuga, commodi, temporibus reprehenderit dolore dolorum assumenda molestias cupiditate, optio saepe eos doloribus.',
-                      replies: [
-                        {
-                          name: 'Akshay',
-                          text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit qui corrupti sed nihil reiciendis illo exercitationem modi fuga, commodi, temporibus reprehenderit dolore dolorum assumenda molestias cupiditate, optio saepe eos doloribus.',
-                          replies: [
-                            {
-                              name: 'Akshay',
-                              text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit qui corrupti sed nihil reiciendis illo exercitationem modi fuga, commodi, temporibus reprehenderit dolore dolorum assumenda molestias cupiditate, optio saepe eos doloribus.',
-                              replies: [
-                                {
-                                  name: 'Akshay',
-                                  text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit qui corrupti sed nihil reiciendis illo exercitationem modi fuga, commodi, temporibus reprehenderit dolore dolorum assumenda molestias cupiditate, optio saepe eos doloribus.',
-                                  replies: [
-                                    {
-                                      name: 'Akshay',
-                                      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit qui corrupti sed nihil reiciendis illo exercitationem modi fuga, commodi, temporibus reprehenderit dolore dolorum assumenda molestias cupiditate, optio saepe eos doloribus.',
-                                      replies: [
-                                        {
-                                          name: 'Akshay',
-                                          text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit qui corrupti sed nihil reiciendis illo exercitationem modi fuga, commodi, temporibus reprehenderit dolore dolorum assumenda molestias cupiditate, optio saepe eos doloribus.',
-                                          replies: [
-                                            {
-                                              name: 'Akshay',
-                                              text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit qui corrupti sed nihil reiciendis illo exercitationem modi fuga, commodi, temporibus reprehenderit dolore dolorum assumenda molestias cupiditate, optio saepe eos doloribus.',
-                                              replies: [],
-                                            },
-                                          ],
-                                        },
-                                      ],
-                                    },
-                                  ],
-                                },
-                              ],
-                            },
-                          ],
-                        },
-                      ],
+                      replies: [],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: 'Akshay',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit qui corrupti sed nihil reiciendis illo exercitationem modi fuga, commodi, temporibus reprehenderit dolore dolorum assumenda molestias cupiditate, optio saepe eos doloribus.',
+      replies: [
+        {
+          name: 'Akshay',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit qui corrupti sed nihil reiciendis illo exercitationem modi fuga, commodi, temporibus reprehenderit dolore dolorum assumenda molestias cupiditate, optio saepe eos doloribus.',
+          replies: [
+            {
+              name: 'Akshay',
+              text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit qui corrupti sed nihil reiciendis illo exercitationem modi fuga, commodi, temporibus reprehenderit dolore dolorum assumenda molestias cupiditate, optio saepe eos doloribus.',
+              replies: [
+                {
+                  name: 'Akshay',
+                  text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit qui corrupti sed nihil reiciendis illo exercitationem modi fuga, commodi, temporibus reprehenderit dolore dolorum assumenda molestias cupiditate, optio saepe eos doloribus.',
+                  replies: [
+                    {
+                      name: 'Akshay',
+                      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit qui corrupti sed nihil reiciendis illo exercitationem modi fuga, commodi, temporibus reprehenderit dolore dolorum assumenda molestias cupiditate, optio saepe eos doloribus.',
+                      replies: [],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: 'Akshay',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit qui corrupti sed nihil reiciendis illo exercitationem modi fuga, commodi, temporibus reprehenderit dolore dolorum assumenda molestias cupiditate, optio saepe eos doloribus.',
+      replies: [
+        {
+          name: 'Akshay',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit qui corrupti sed nihil reiciendis illo exercitationem modi fuga, commodi, temporibus reprehenderit dolore dolorum assumenda molestias cupiditate, optio saepe eos doloribus.',
+          replies: [
+            {
+              name: 'Akshay',
+              text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit qui corrupti sed nihil reiciendis illo exercitationem modi fuga, commodi, temporibus reprehenderit dolore dolorum assumenda molestias cupiditate, optio saepe eos doloribus.',
+              replies: [
+                {
+                  name: 'Akshay',
+                  text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit qui corrupti sed nihil reiciendis illo exercitationem modi fuga, commodi, temporibus reprehenderit dolore dolorum assumenda molestias cupiditate, optio saepe eos doloribus.',
+                  replies: [
+                    {
+                      name: 'Akshay',
+                      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit qui corrupti sed nihil reiciendis illo exercitationem modi fuga, commodi, temporibus reprehenderit dolore dolorum assumenda molestias cupiditate, optio saepe eos doloribus.',
+                      replies: [],
                     },
                   ],
                 },
@@ -89,8 +111,8 @@ const CommentsContainer = () => {
     return (
       <>
         {comments.map((comment, index) => (
-          <div>
-            <Comment key={index} data={comment} />
+          <div key={index}>
+            <Comment data={comment} />
             <div className=" pl-5 border border-l-black ml-5">
               <CommentsList comments={comment.replies} />
             </div>
@@ -103,7 +125,6 @@ const CommentsContainer = () => {
   return (
     <div className=" m-5 p-2">
       <h1 className=" text-2xl font-bold">Comments:</h1>
-      <CommentsList comments={commentsData} />
       <CommentsList comments={commentsData} />
     </div>
   );
